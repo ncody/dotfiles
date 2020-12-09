@@ -6,6 +6,7 @@ for file in ~/.dotfiles/bash/{bash_prompt,exports,functions,aliases}; do
   [ -r "$file" ] && source "$file"
 done
 unset file
+[ -r ~/.dotfiles/secret ] && source ~/.dotfiles/secret
 
 # fix font smoothing on macs
 if [[ $platform = 'darwin' ]]; then
